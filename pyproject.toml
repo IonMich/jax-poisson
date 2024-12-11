@@ -40,3 +40,4 @@ packages = ["jaxpoisson"]
 
 [tool.setuptools_scm]
 write_to = "jaxpoisson/_version.py"
+local_scheme = "no-local-version"
