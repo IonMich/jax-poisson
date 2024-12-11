@@ -12,13 +12,13 @@ authors = [
     {name = "Ioannis Michaloliakos", email = "ioannis.michalol@gmail.com"},
 ]
 description = "Simulation and Statistical Inference for Poisson Random Fields"
-long_description = "README.md"
-long_description_content_type = "text/markdown"
 readme = "README.md"
 requires-python = ">=3.10"
 keywords = ["poisson", "jax", "point-process"]
 classifiers = [
+    "Development Status :: 3 - Alpha",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
@@ -30,6 +30,9 @@ dependencies = [
     "matplotlib",
 ]
 dynamic = ["version"]
+
+[project.urls]
+Repository = "https://github.com/IonMich/jaxpoisson.git"
 
 [tool.setuptools]
 include-package-data = true # already defaults to true
