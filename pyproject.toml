@@ -1,0 +1,39 @@
+# Starting with PEP 621, the Python community selected pyproject.toml as a standard 
+# way of specifying project metadata. Setuptools has adopted this standard and will 
+# use the information contained in this file as an input in the build process.
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jaxpoisson"
+authors = [
+    {name = "Ioannis Michaloliakos", email = "ioannis.michalol@gmail.com"},
+]
+description = "Simulation and Statistical Inference for Poisson Random Fields"
+long_description = "README.md"
+long_description_content_type = "text/markdown"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["poisson", "jax", "point-process"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "jax",
+    "jaxlib",
+    "numpy",
+    "scipy",
+    "matplotlib",
+]
+dynamic = ["version"]
+
+[tool.setuptools]
+include-package-data = true # already defaults to true
+packages = ["jaxpoisson"]
+
+[tool.setuptools_scm]
+write_to = "jaxpoisson/_version.py"
